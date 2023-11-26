@@ -6,9 +6,11 @@
 <meta charset="ISO-8859-1">
 <title>HelloWorld</title>
 </head>
-<body>
-<h1>Welcome To</h1><h1 style="color: green;">Spring Boot </h1>
 
+<body>
+<h1>Welcome To</h1>
+<h1 style="color: green;">SpringBoot </h1>
+<hr>
 
 
 
