@@ -65,7 +65,7 @@ li:last-child {
  <ul>
   <li><a href="/todo">Home</a></li>
   <li><a href="/todo">Add Todo</a></li>
-  <li><a href="/viewALl">Todo List</a></li>
+  <li><a href="/viewAllList">Todo List</a></li>
   <li style="float:right"><a class="active" href="#about">About</a></li>
 </ul> 
 <hr>

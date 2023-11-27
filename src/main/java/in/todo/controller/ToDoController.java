@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,8 @@ import in.todo.model.service.IToDoService;
 
 @Controller
 public class ToDoController{
+	
+	Logger  logger = LoggerFactory.getLogger(ToDoController.class);
 	@Autowired
 	 private IToDoService doService;
 
@@ -29,6 +33,7 @@ public class ToDoController{
 	@GetMapping("/testApp")
 	public String testApp() {
 		
+		  logger.info("APplication is up and running .......");
 		
 		return "testApp";
 	}
@@ -37,7 +42,7 @@ public class ToDoController{
 	@GetMapping("/todo")
 	public String testAppMVC() {
 		
-		
+		  logger.info("Accessing the Home page  .......");
 		
 		return "ToDoView";
 	}
@@ -49,6 +54,8 @@ public class ToDoController{
 	    doService.saveOrUpdateToDoList(toDoData);
 	    
 	    model.addAttribute("data",toDoData);
+	    
+	    logger.info("save data performed.......");
          
 		return "ToDoView";
 	}
@@ -67,15 +74,24 @@ public class ToDoController{
 	}
 
 	
-	@GetMapping(value = "/viewALl")
+	@GetMapping(value = "/viewAllList")
 	public String getAllToDo(Model model) {
 		
+		  logger.info("Enter into getALlTodo list  .......");
 		
-		
+		  Boolean status =false;
 		List<ToDoData> todoList  =   doService.getAllToDo();
 		 model.addAttribute("todoList", todoList);
+		  logger.info("returning with data  ......."+todoList);
 		  
-		return "ViewAll";
+		      if (!todoList.isEmpty()||todoList!=null) {
+				return "ViewAll";
+			}
+		      else {
+		    	  return "error";
+		      }
+		    
+		
 	}
 
 	
