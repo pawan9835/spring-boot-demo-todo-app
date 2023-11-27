@@ -80,11 +80,11 @@ public class ToDoController{
 		  logger.info("Enter into getALlTodo list  .......");
 		
 		  Boolean status =false;
-		List<ToDoData> todoList  ;//=   doService.getAllToDo();
+		List<ToDoData> todoList =   doService.getAllToDo();
   
-todoList = new ArrayList();
+//todoList = new ArrayList();
 
-       todoList.add("To Do View Under Development ");
+       //todoList.add("To Do View Under Development ");
 		 model.addAttribute("todoList", todoList);
 		  logger.info("returning with data  ......."+todoList);
 		  
