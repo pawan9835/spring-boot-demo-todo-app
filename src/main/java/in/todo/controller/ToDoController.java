@@ -82,20 +82,20 @@ public class ToDoController{
 		  Boolean status =false;
 		List<ToDoData> todoList =   doService.getAllToDo();
   
-//todoList = new ArrayList();
-
-       //todoList.add("To Do View Under Development ");
 		 model.addAttribute("todoList", todoList);
 		  logger.info("returning with data  ......."+todoList);
-		  
-		      if (!todoList.isEmpty()||todoList!=null) {
+
+
+		        
+		     
+		   /*   if (!todoList.isEmpty()||todoList!=null) {
 				return "ViewAll";
 			}
 		      else {
 		    	  return "error";
-		      }
+		      }  */
 		    
-		
+		return "ViewAll";
 	}
 
 	
