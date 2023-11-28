@@ -86,14 +86,6 @@ public class ToDoController{
 		  logger.info("returning with data  ......."+todoList);
 
 
-		        
-		     
-		   /*   if (!todoList.isEmpty()||todoList!=null) {
-				return "ViewAll";
-			}
-		      else {
-		    	  return "error";
-		      }  */
 		    
 		return "ViewAll";
 	}
