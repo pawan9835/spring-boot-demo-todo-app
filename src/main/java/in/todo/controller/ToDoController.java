@@ -33,7 +33,7 @@ public class ToDoController{
 	@GetMapping("/testApp")
 	public String testApp() {
 		
-		  logger.info("APplication is up and running .......");
+		    logger.info("APplication is up and running .......");
 		
 		return "testApp";
 	}
